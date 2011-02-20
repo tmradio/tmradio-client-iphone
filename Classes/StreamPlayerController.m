@@ -54,6 +54,10 @@
 {
     // NSLog(@"viewDidLoad");
     [super viewDidLoad];
+
+    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+    [playEnabledSwitch setOn: [d boolForKey: @"auto_play"] animated: NO];
+
     [self playSwitchChanged: self];
 }
 
@@ -121,6 +125,11 @@
 
 - (void) playSwitchChanged:(id)sender
 {
+    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+
+    [d setBool: playEnabledSwitch.on forKey: @"auto_play"];
+    [d synchronize];
+
     if (playEnabledSwitch.on) {
         [streamer start];
     } else {

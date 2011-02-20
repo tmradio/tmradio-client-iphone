@@ -97,12 +97,6 @@
         [twits release];
     }
     twits = [[theDictionary valueForKey: @"results"] retain];
-    for (NSDictionary *twit in twits) {
-        NSString *user = [twit valueForKey: @"from_user"];
-        NSString *text = [[twit valueForKey: @"text"] stringByReplacingOccurrencesOfString: @"&quot;" withString: @"\""];
-
-        NSLog(@"%@: %@", user, text);
-    }
 
     [table reloadData];
 }
@@ -126,9 +120,8 @@
 {
     NSUInteger index = [indexPath indexAtPosition: 1];
 
-    NSLog(@"looking for row %d", index);
     NSDictionary *twit = [twits objectAtIndex: index];
-    NSString *user = [twit valueForKey: @"from_user"];
+    NSString *user = [NSString stringWithFormat: @"@%@", [twit valueForKey: @"from_user"]];
     NSString *text = [[twit valueForKey: @"text"] stringByReplacingOccurrencesOfString: @"&quot;" withString: @"\""];
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"TwitterController"];
@@ -163,10 +156,8 @@
         secondLabel = (UILabel *)[cell.contentView viewWithTag:102];
     }
 
-    mainLabel.text = [NSString stringWithString: text];
-    secondLabel.text = [NSString stringWithString: user];
-
-    NSLog(@"-> returning row %d", index);
+    mainLabel.text = text;
+    secondLabel.text = user;
 
     return cell;
 }
