@@ -8,16 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@class AudioStreamer;
 
-@interface FirstViewController : UIViewController
+@interface StreamPlayerController : UIViewController
 {
     UISwitch *playEnabledSwitch;
     UITextView *songInfoText;
     UIActivityIndicatorView *bufferingIndicator;
+
+    AudioStreamer *streamer;
 }
 
 @property (nonatomic, retain) IBOutlet UISwitch *playEnabledSwitch;
 @property (nonatomic, retain) IBOutlet UITextView *songInfoText;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *bufferingIndicator;
 
+- (IBAction) playSwitchChanged:(id)sender;
+
+- (void) initStreamer;
+- (void) deInitStreamer;
+- (void) reInitStreamer;
+
+- (void) setInfoText: (NSString *)new_text;
 @end
