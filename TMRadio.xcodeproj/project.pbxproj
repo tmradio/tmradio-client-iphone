@@ -16,9 +16,10 @@
 		2840D7CE1179279E00D7F93C /* StreamPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2840D7CD1179279E00D7F93C /* StreamPlayer.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
-		A91D5E381312A0C600C4A0D7 /* TMRadio.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A91D5E371312A0C600C4A0D7 /* TMRadio.xcdatamodel */; };
 		A91D5E431314517900C4A0D7 /* PodcastsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91D5E421314517900C4A0D7 /* PodcastsController.m */; };
 		A91D5E461314542F00C4A0D7 /* NSArray_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = A91D5E451314542F00C4A0D7 /* NSArray_JSONExtensions.m */; };
+		A91D5E9213145DC700C4A0D7 /* TMRadio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A91D5E9113145DC700C4A0D7 /* TMRadio.xcdatamodeld */; };
+		A91D5ECA13145FAE00C4A0D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91D5EC913145FAE00C4A0D7 /* CoreData.framework */; };
 		A9C4D5D913113F7C0008FFDF /* Podcasts.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9C4D5D813113F7C0008FFDF /* Podcasts.xib */; };
 		A9C4D5EA1311433C0008FFDF /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C4D5E91311433C0008FFDF /* AudioStreamer.m */; };
 		A9C4D5F4131146310008FFDF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C4D5F3131146310008FFDF /* CFNetwork.framework */; };
@@ -68,6 +69,7 @@
 		A91D5E421314517900C4A0D7 /* PodcastsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodcastsController.m; sourceTree = "<group>"; };
 		A91D5E441314542F00C4A0D7 /* NSArray_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_JSONExtensions.h; sourceTree = "<group>"; };
 		A91D5E451314542F00C4A0D7 /* NSArray_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_JSONExtensions.m; sourceTree = "<group>"; };
+		A91D5EC913145FAE00C4A0D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9C4D5D813113F7C0008FFDF /* Podcasts.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Podcasts.xib; sourceTree = "<group>"; };
 		A9C4D5E81311433C0008FFDF /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		A9C4D5E91311433C0008FFDF /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				A9C4D8A713117CA90008FFDF /* MobileCoreServices.framework in Frameworks */,
 				A9C4D8A913117CA90008FFDF /* SystemConfiguration.framework in Frameworks */,
 				A9C4D8AB13117CA90008FFDF /* libz.dylib in Frameworks */,
+				A91D5ECA13145FAE00C4A0D7 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +181,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				A91D5EC913145FAE00C4A0D7 /* CoreData.framework */,
 			);
 			name = TMRadio;
 			sourceTree = "<group>";
@@ -199,7 +203,7 @@
 				282CCBFD0DB6C98000C4EA27 /* TwitterView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* TMRadio-Info.plist */,
-				A91D5E371312A0C600C4A0D7 /* TMRadio.xcdatamodel */,
+				A91D5E9113145DC700C4A0D7 /* TMRadio.xcdatamodeld */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -406,7 +410,7 @@
 				A9C4D8D313117D790008FFDF /* CJSONDeserializer.m in Sources */,
 				A9C4D8D413117D790008FFDF /* CJSONScanner.m in Sources */,
 				A9C4D8D513117D790008FFDF /* CJSONSerializer.m in Sources */,
-				A91D5E381312A0C600C4A0D7 /* TMRadio.xcdatamodel in Sources */,
+				A91D5E9213145DC700C4A0D7 /* TMRadio.xcdatamodeld in Sources */,
 				A91D5E431314517900C4A0D7 /* PodcastsController.m in Sources */,
 				A91D5E461314542F00C4A0D7 /* NSArray_JSONExtensions.m in Sources */,
 			);
@@ -495,6 +499,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A91D5E9113145DC700C4A0D7 /* TMRadio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A91D5E371312A0C600C4A0D7 /* TMRadio.xcdatamodel */,
+			);
+			currentVersion = A91D5E371312A0C600C4A0D7 /* TMRadio.xcdatamodel */;
+			path = TMRadio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }
